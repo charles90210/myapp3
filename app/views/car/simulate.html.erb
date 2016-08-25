@@ -1,0 +1,22 @@
+<h1>Welcome to the Car Simulator</h1>
+<p>You have successfully created a new car!</p>
+<p>Make: <%= @car.make %></p>
+<p>Year: <%= @car.year %></p>
+<p>Speed: <%= @car.speed %> mph</p>
+<p>Lights: <%= @car.lights %></p>
+<form action="accelerate" method="get">
+  <input type="submit" value="Accelerate"/>
+</form>
+<form action="brake" method="get">
+  <input type="submit" value="Brake"/>
+</form>
+<form action="toggle_lights" method="get">
+  <input type="submit" value="Lights"/>
+</form>
+<form method="get" action="set_parking_brake">
+  Off
+  <%= radio_button_tag 'parking_brake', 'pb_off' %>
+  On
+  <%= radio_button_tag 'parking_brake', 'pb_on' %>
+  <input type="submit" value="Update Parking Brake"/>
+</form>
